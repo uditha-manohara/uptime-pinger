@@ -1,0 +1,15 @@
+name: Ping Apps Every Minute
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' # every 1 minute
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Replit and Glitch
+        run: |
+          curl -s https://fancy-lumbar-idea.glitch.me/
+          curl -s https://20f805a0-8db3-4dff-b86f-19cf1a138524-00-hwa5dn1z2mzv.sisko.replit.dev/
